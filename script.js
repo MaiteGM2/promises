@@ -58,3 +58,11 @@ Promise.any([file1.download(), file2.download(), file3.download(), file4.downloa
     .catch((error) => {
         console.error(`No file downloaded correctly:`, error);
     });
+
+Promise.race([file1.download(), file2.download(), file3.download(), file4.download()])
+    .then((values) => {
+        console.log(`Race:`, values);
+    })
+    .catch((error) => {
+        console.error(`Race:`, error);
+    });
