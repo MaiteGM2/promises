@@ -42,3 +42,11 @@ Promise.all([file1.download(), file2.download(), file3.download(), file4.downloa
     .catch((error) => {
         console.error(`There was a problem downloading at least one file:`, error);
     });
+
+Promise.allSettled([file1.download(), file2.download(), file3.download(), file4.download()])
+    .then((values) => {
+        console.log(`All settled:`, values);
+    })
+    .catch((error) => {
+        console.error(`All settled:`, error);
+    });
