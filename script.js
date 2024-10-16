@@ -50,3 +50,11 @@ Promise.allSettled([file1.download(), file2.download(), file3.download(), file4.
     .catch((error) => {
         console.error(`All settled:`, error);
     });
+
+Promise.any([file1.download(), file2.download(), file3.download(), file4.download()])
+    .then((values) => {
+        console.log(`The first to be downloaded was:`, values);
+    })
+    .catch((error) => {
+        console.error(`No file downloaded correctly:`, error);
+    });
