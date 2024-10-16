@@ -29,3 +29,8 @@ class FileDownload{
         });
     }
 }
+
+const file1 = new FileDownload(`VS Code`, 500);
+const file2 = new FileDownload(`Solid Edge`, 6500);
+const file3 = new FileDownload(`Spotify`, 1440);
+const file4 = new FileDownload(`EA APP`, 664);
